@@ -26,6 +26,10 @@ const OfferCards: FC = () => {
         } else {
             setMessage("Не удалось загрузить")
         }
+
+        setImg(undefined);
+        setTask(undefined);
+        setName(undefined);
     });
 
 
@@ -49,7 +53,7 @@ const OfferCards: FC = () => {
     }
 
     return (
-        <Flex direction={"column"} alignItems={"center"} gap={5}>
+        <Flex direction={"column"} alignItems={"center"} gap={5} mb={10}>
             <Heading fontSize={"2xl"} textAlign={"left"} width={"100%"}>Предложить варианты карт</Heading>
             <Heading fontSize={"lg"} textAlign={"left"} width={"100%"}>Название карточки</Heading>
             <Input placeholder={"Тайтл"} onChange={onChangeName} value={name}/>
@@ -57,7 +61,7 @@ const OfferCards: FC = () => {
             <Input placeholder={"Ссылка на картинку"} onChange={onChangeImg} value={img}/>
             <Heading fontSize={"lg"} textAlign={"left"} width={"100%"}>Задание карточки</Heading>
             <Textarea onChange={onChangeText} value={task}/>
-            <Flex gap={5} justifyContent={"space-between"} alignItems={"center"} width={"100%"}>
+            <Flex gap={5} justifyContent={"space-between"} alignItems={"center"} width={"100%"} >
                 <Heading fontSize={"lg"}>{message}</Heading>
                 <Button size={"lg"} onClick={onSubmit} disabled={!(name && task)} isLoading={isLoading} justifySelf={"flex-end"}>
                     Отправить

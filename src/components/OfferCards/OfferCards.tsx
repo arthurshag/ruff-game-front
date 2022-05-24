@@ -27,9 +27,9 @@ const OfferCards: FC = () => {
             setMessage("Не удалось загрузить")
         }
 
-        setImg(undefined);
-        setTask(undefined);
-        setName(undefined);
+        setImg("");
+        setTask("");
+        setName("");
     });
 
 

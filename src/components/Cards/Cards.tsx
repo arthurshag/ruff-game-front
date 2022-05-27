@@ -17,8 +17,8 @@ import {useFetching} from "../../hooks/useFetching";
 import {ICard} from "../../models/Card";
 import {baseUrl} from "../../api/config";
 import ToastBtn from "./ToastHandler";
+import BaseImg from "./../../assets/logo.jpg";
 
-const baseImg = "https://sun9-11.userapi.com/s/v1/ig2/uSpikgYqamdT99zc-Ym2J7Jw75-uaIBkuQ4_mt3vlP5TcLS9F-hL3cIep4TMqQf06NQWLbEGk-B3yJUdz-imoe2W.jpg?size=1170x1060&quality=96&type=album";
 const Cards: FC = () => {
     const [index, setIndex] = useState(0);
     const [cards, setCards] = useState<ICard[] | null>(null);
@@ -58,7 +58,7 @@ const Cards: FC = () => {
                     </Box>
                 </Alert>}
                 <Image alignSelf={"center"} boxSize={"4xl"}
-                       src={currentCard?.img || baseImg}/>
+                       src={currentCard?.img || BaseImg}/>
                 <Progress value={(index + 1) / cards.length * 100} size='xs' width={"100%"}/>
 
                 <Divider/>

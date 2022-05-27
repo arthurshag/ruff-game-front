@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {Box, Container, Flex, Image, Text, useColorMode} from "@chakra-ui/react";
 import {ColorModeSwitcher} from "../../ColorModeSwitcher";
-import Logo from "./../../assets/logo.jpg";
+import Logo from "./../../assets/pig.png";
 import {Link} from "react-router-dom";
 
 const Header: FC = () => {

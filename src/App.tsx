@@ -8,7 +8,7 @@ import OfferCards from "./components/OfferCards/OfferCards";
 const App = () => {
     return (<ChakraProvider theme={theme}>
             <Header/>
-            <Container maxW={"container.lg"} pt={5} >
+            <Container maxW={"container.lg"} pt={5}>
                 <Routes>
                     <Route path="/" element={<Cards/>}/>
                     <Route path="/admin" element={<OfferCards/>}/>
